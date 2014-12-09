@@ -66,8 +66,9 @@ public class EditAdminFrame extends JFrame {
                             + "\", `name` = \"" + nameField.getText() + "\", `surname` = \"" + surnameField.getText() + "\", `telephone` = \"" + telephoneField.getText() + "\", `adress` = \"" + adressField.getText()
                             + "\" where `login` = \"admin\"");
                     stmt.close();
+                    JOptionPane.showMessageDialog(null, "Saved!");
                 } catch (SQLException exc) {
-                    JOptionPane.showMessageDialog(null, "No user!");
+                    JOptionPane.showMessageDialog(null, "Error!");
                 }
 
             }

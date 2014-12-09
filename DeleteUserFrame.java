@@ -77,8 +77,9 @@ public class DeleteUserFrame extends JFrame {
                     stmt = con.createStatement();
                     stmt.executeUpdate("DELETE FROM `Users` WHERE `login` = \"" + loginField.getText()+ "\"");
                     stmt.close();
+                    JOptionPane.showMessageDialog(null, "Deleted!");
                 } catch (SQLException exc) {
-                    JOptionPane.showMessageDialog(null, "No user!");
+                    JOptionPane.showMessageDialog(null, "Error!");
                 }
 
             }

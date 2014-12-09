@@ -85,9 +85,10 @@ public class EditUserFrame extends JFrame {
                             + "\", `name` = \"" + nameField.getText() + "\", `surname` = \"" + surnameField.getText()  + "\", `telephone` = \"" + telephoneField.getText() + "\", `adress` = \"" + adressField.getText()
                             + "\" where `login` = \"" + loginField.getText() + "\"");
                     stmt.close();
+                    JOptionPane.showMessageDialog(null, "Saved!");
                 }
                 catch(SQLException exc){
-                    JOptionPane.showMessageDialog(null, "No user!");
+                    JOptionPane.showMessageDialog(null, "Error!");
                 }
 
             }
