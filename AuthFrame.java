@@ -55,11 +55,12 @@ public class AuthFrame extends JFrame {
                 processResult = process(loginField.getText(),passField.getPassword());
                 System.out.println(processResult);
                 switch(processResult){
-                    case 1: ; break;
+                    case 1: new AdminFrame(); break;
                     case 2: ; break;
                     case 0: ; break;
                     case -1: ; break;
                 }
+                setVisible(false);
 
 
             }

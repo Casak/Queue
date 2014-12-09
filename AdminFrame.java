@@ -30,7 +30,8 @@ public class AdminFrame extends JFrame {
         delUser.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new DeleteUserFrame();
+                setVisible(false);
             }
         });
 
