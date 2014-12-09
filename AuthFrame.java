@@ -55,8 +55,8 @@ public class AuthFrame extends JFrame {
                 processResult = process(loginField.getText(),passField.getPassword());
                 System.out.println(processResult);
                 switch(processResult){
-                    case 1: new AdminFrame(); break;
-                    case 2: ; break;
+                    case 1: new AdminFrame().setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);; break;
+                    case 2: new UserFrame().setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);; break;
                     case 0: ; break;
                     case -1: ; break;
                 }
